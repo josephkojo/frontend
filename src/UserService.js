@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 class UserService{
-  static BASE_URL = "http://localhost:5000"
+  static BASE_URL = "https://access-key.onrender.com"
   
   static async register(requestBody){
     
