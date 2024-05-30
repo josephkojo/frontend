@@ -18,7 +18,7 @@ class UserService{
 
   }
 
-  static async login(requestBody){
+  static async login(requestBody,token){
     try{
       const response = await axios.post(`${UserService.BASE_URL}/auth/login`, requestBody,
       {
