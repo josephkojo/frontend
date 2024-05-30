@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import './Login.css';
+import './Login.css'
+
+
 import { Button, Badge } from "react-bootstrap"; // Import Badge component for status styling
 import UserService from "../UserService";
 import { useParams } from "react-router-dom";
@@ -35,12 +37,13 @@ const User = () => {
 
   }, [userId]);
 
+
   const handleClick = async () => {
     try {
       setLoading(true); 
       const token = localStorage.getItem('token');
       const response = await UserService.generateKeyByUser(userId, token);
-      if (response.success) {
+      if (!response) {
         toast.success("Key generated successfully");
         const keysResponse = await UserService.getKeysGeneratedByUser(userId, token);
         setAccessKeys(keysResponse);
@@ -54,13 +57,13 @@ const User = () => {
       setLoading(false); 
     }
   };
-
+  
   return (
     <div className="container">
-      <h2><strong>Hello {name}!</strong></h2>
+     <h2><strong>Hello {name}!</strong></h2>
       <div className="d-flex justify-content-end mb-3">
-        <Button variant="success" onClick={handleClick} disabled={loading}>
-          {loading ? "Generating..." : "Generate New Access Key"}
+        <Button variant="success" onClick={handleClick}>
+          Generate New Access Key
         </Button>
       </div>
       <div className="cards">
@@ -75,6 +78,7 @@ const User = () => {
                 {card.status}
               </Badge>
             </p>
+           
           </div>
         ))}
       </div>
