@@ -29,7 +29,7 @@ const Login = () => {
         if (UserService.isAdmin()) {
           navigate('/admin');
         } else {
-          navigate(`/s/${userData.id}`);
+          navigate(`/user/${userData.id}`);
         }
       }, 2000); 
     } catch (err) {
