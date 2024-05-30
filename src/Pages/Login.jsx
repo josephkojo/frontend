@@ -19,7 +19,7 @@ const Login = () => {
     setError('');
     setLoading(true);
     try {
-      const userData = await UserService.login(formData,localStorage.getItem('token'));
+      const userData = await UserService.login(formData);
       localStorage.setItem('role', userData.role);
       localStorage.setItem('token', userData.token);
       localStorage.setItem('name', userData.firstname);
