@@ -61,6 +61,7 @@ const User = () => {
   return (
     <div className="container">
      <h2><strong>Hello {name}!</strong></h2>
+     <p>Welcome to Access Manager Platform..</p>
       <div className="d-flex justify-content-end mb-3">
         <Button variant="success" onClick={handleClick}>
           Generate New Access Key
