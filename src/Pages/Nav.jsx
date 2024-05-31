@@ -26,7 +26,7 @@ const Nav = () => {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav ms-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/" style={{ color: '#fff' }}>Home</Link>
+                <Link className="nav-link" to="/" style={{ color: '#fff' }}>Login</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/register" style={{ color: '#fff' }}>Register</Link>
