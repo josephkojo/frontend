@@ -114,14 +114,14 @@ class UserService{
 
   static async forgotPassword(email, token) {
     try {
-      const response = await axios.post(`${UserService.BASE_URL}/forgotPassword/${email}`, null, {
+      const response = await axios.post(`${this.BASE_URL}/forgotPassword/${email}`, null, {
         headers: {
           Authorization: `Bearer ${token}`
         }
       });
       return response.data;
     } catch (error) {
-      // console.error('Error in forgotPassword:', error); 
+      console.error('Error in forgotPassword:', error.response ? error.response.data : error.message);
       throw error;
     }
   }
