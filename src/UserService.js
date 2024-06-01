@@ -308,10 +308,9 @@ class UserService{
     }
   }
   
-
-  static async forgotPassword(email, token) {
+  static async forgotPassword(emails, token) {
     try {
-      const response = await axios.post(`${UserService.BASE_URL}/forgotPassword/${email}`, null, {
+      const response = await axios.post(`${UserService.BASE_URL}/forgotPassword/${emails}`, null, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -322,6 +321,7 @@ class UserService{
       throw error;
     }
   }
+
   
 
 
