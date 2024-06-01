@@ -31,7 +31,7 @@ const ForgotPassword = () => {
       } else {
         toast.error('An error occurred while sending password reset email', { autoClose: 2000 }); 
       }
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -317,7 +317,7 @@ class UserService{
       });
       return response.data;
     } catch (error) {
-      console.error('Error in forgotPassword:', error); 
+      // console.error('Error in forgotPassword:', error); 
       throw error;
     }
   }
