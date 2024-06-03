@@ -16,7 +16,8 @@ const ForgotPassword = () => {
     try {
       const token = localStorage.getItem('token');
       localStorage.setItem('email', email);
-      const response = await UserService.forgotPassword(email, token);
+      const requestBody = { email }; 
+      const response = await UserService.forgotPassword(requestBody, token);
       setLoading(false); 
       navigate('/code');
 
