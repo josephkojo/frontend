@@ -11,7 +11,7 @@ const Nav = () => {
   const handleCloseLogoutModal = () => setShowLogoutModal(false);
 
   const handleLogout = () => {
-    UserService.logout();
+    // UserService.logout();
     navigate('/');
   };
 
