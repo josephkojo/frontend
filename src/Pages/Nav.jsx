@@ -29,7 +29,7 @@ const Nav = () => {
                 <Link className="nav-link" to="/" style={{ color: '#fff' }}>Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/register" style={{ color: '#fff' }}>Register</Link>
+                <Link className="nav-link" to="/register" style={{ color: '#fff' }}>Create An Account</Link>
               </li>
               <li className="nav-item">
                 <span className="nav-link" onClick={handleShowLogoutModal} style={{ cursor: 'pointer', color: '#fff' }}>Logout</span>
