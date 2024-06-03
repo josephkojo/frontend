@@ -72,7 +72,7 @@ h1 {
 .cards {
   display: flex;
   flex-wrap: wrap; /* Enable wrapping */
-  justify-content: space-between; /* Distribute cards evenly */
+  justify-content: space-between;
   gap: 20px; /* Add gap between cards */
 }
 
